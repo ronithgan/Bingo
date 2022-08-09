@@ -18,17 +18,3 @@ var searchdivnew = document.getElementById("search-term-accessibility-navigation
 				input16.appendChild(img8);
 			}
 		}
-
-
-
-        //different image here with both options  **
-        //separate js for checkout **
-        // change checkout graphics **
-
-
-        // items
-        //refresh
-         // analytics for extension (google or aws)
-        // survey + website
-        //instacart changes
-       
