@@ -1,0 +1,67 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bingo Trial",
+  "description": "This extension will be used to test out my project, Bingo",
+  "version": "1.2",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "contextMenus",
+    "tabs",
+    "contentSettings",
+    "scripting",
+    "http://*/*",
+    "https://*/*",
+    "declarativeContent",
+    "webNavigation"
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "bingo_logo_v4.png"
+  },
+  
+
+  "icons" : {
+    "16": "bingo_logo_v4.png",
+    "32": "bingo_logo_v4.png",
+    "48": "bingo_logo_v4.png",
+    "128": "bingo_logo_v4.png"
+  },
+  "content_scripts": [
+		{
+    "js": ["content.js"],
+    "run_at": "document_idle",
+    "matches": ["https://www.instacart.com/*"]
+  		},
+      {
+        "js": ["storefront.js"],
+        "matches": ["https://www.instacart.com/store/*/storefront"]
+      },
+      {
+        "js": ["store.js"],
+        "matches": ["https://www.instacart.com/store"]
+      },
+      {
+        "js": ["checkout.js"],
+        "matches": ["https://www.instacart.com/store/checkout_v3"]
+      },
+      {
+        "js": ["items.js"],
+        "matches": ["https://www.instacart.com/store/items/*"]
+      },
+      {
+        "js": ["onboarding.js"],
+        "matches": ["https://www.instacart.com/onboarding"]
+      }
+    ],
+  "options_page": "options.html"
+}
+

@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+  
+    "name": "Bingo Trial",
+    "description": "This extension will be used to test out my project, Bingo",
+    "version": "1.1",
+    "background" : {
+      "service_worker": "background.js"
+    },
+  
+    "permissions": [
+      "storage",
+      "notifications",
+      "contextMenus",
+      "tabs",
+      "contentSettings",
+      "activeTab",
+      "scripting"
+    ],
+  
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "bingo_logo_v4.png"
+    },
+    
+  
+    "icons" : {
+      "16": "bingo_logo_v4.png",
+      "32": "bingo_logo_v4.png",
+      "48": "bingo_logo_v4.png",
+      "128": "bingo_logo_v4.png"
+    }
+  }
+  
+  
